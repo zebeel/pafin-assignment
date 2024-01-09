@@ -1,0 +1,40 @@
+### get a valid JWT
+GET http://localhost:3000/getJWT
+Content-Type: application/json
+
+### [CREATE] add a new user
+POST http://localhost:3000/user/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2h1b25nIExlIiwiZW1haWwiOiJjaHVvbmcubGUuanBAZ21haWwuY29tIiwiaWF0IjoxNzA0NDM0NTA2fQ.AWF23HdWXOLb_uLi4Y6_DGkI_0RnAF-pIUdJ9D5h-Kw
+
+{
+  "name": "Chuong Le",
+  "email": "chuong1@test.com",
+  "password": "Chuong123"
+}
+
+### [READ] get all users
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2h1b25nIExlIiwiZW1haWwiOiJjaHVvbmcubGUuanBAZ21haWwuY29tIiwiaWF0IjoxNzA0NDM0NTA2fQ.AWF23HdWXOLb_uLi4Y6_DGkI_0RnAF-pIUdJ9D5h-Kw
+
+### [READ] get an user
+GET http://localhost:3000/user/14e0fa64-7864-42f9-bf05-a8f37aab392e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2h1b25nIExlIiwiZW1haWwiOiJjaHVvbmcubGUuanBAZ21haWwuY29tIiwiaWF0IjoxNzA0NDM0NTA2fQ.AWF23HdWXOLb_uLi4Y6_DGkI_0RnAF-pIUdJ9D5h-Kw
+
+### [UPDATE] change password
+PUT http://localhost:3000/user/change-password/14e0fa64-7864-42f9-bf05-a8f37aab392e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2h1b25nIExlIiwiZW1haWwiOiJjaHVvbmcubGUuanBAZ21haWwuY29tIiwiaWF0IjoxNzA0NDM0NTA2fQ.AWF23HdWXOLb_uLi4Y6_DGkI_0RnAF-pIUdJ9D5h-Kw
+
+{
+  "currentPassword": "Chuong123",
+  "newPassword": "Chuong123"
+}
+
+### [DELETE] delete an user
+DELETE http://localhost:3000/user/delete/612c96f3-b2e5-4c33-a867-7c0ac74bb0e0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQ2h1b25nIExlIiwiZW1haWwiOiJjaHVvbmcubGUuanBAZ21haWwuY29tIiwiaWF0IjoxNzA0NDM0NTA2fQ.AWF23HdWXOLb_uLi4Y6_DGkI_0RnAF-pIUdJ9D5h-Kw
+
+
